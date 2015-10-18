@@ -51,7 +51,7 @@ namespace Rex.Skill.Tdd.Tests.GroupPaging
         }
 
         [TestMethod()]
-        public void SunGoodsRevenueTest_4筆一組_取Revenue總和()
+        public void SumGoodsRevenueTest_4筆一組_取Revenue總和()
         {
             List<decimal> expected = new List<decimal>() { 50, 66, 60 };
 
