@@ -50,6 +50,7 @@
     <Compile Include="Calculator\Calculator.cs" />
     <Compile Include="Calculator\ICalculator.cs" />
     <Compile Include="GroupPaging\Goods.cs" />
+    <Compile Include="GroupPaging\GroupPagingType.cs" />
     <Compile Include="GroupPaging\IGroupPagingService.cs" />
     <Compile Include="GroupPaging\GroupPagingContext.cs" />
     <Compile Include="GroupPaging\GroupPagingService.cs" />
