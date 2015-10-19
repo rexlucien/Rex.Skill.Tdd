@@ -5,13 +5,19 @@ namespace Rex.Skill.Tdd.GroupPaging
 {
     public class GroupPagingService : IGroupPagingService
     {
-        private readonly IGroupPagingContext _context;
-
         public GroupPagingService(IGroupPagingContext context)
         {
-            _context = context;
+            Goods = context.Goodies.ToList();
         }
 
+        private List<Goods> Goods { get; }
+
+        /// <summary>
+        /// Sum Goods
+        /// </summary>
+        /// <param name="groupPagingType"></param>
+        /// <param name="groupingCount"></param>
+        /// <returns></returns>
         public IEnumerable<int> SumGoods(GroupPagingType groupPagingType, int groupingCount)
         {
             switch (groupPagingType)
@@ -27,38 +33,36 @@ namespace Rex.Skill.Tdd.GroupPaging
             }
         }
 
+        /// <summary>
+        /// Sum By Cost
+        /// </summary>
+        /// <param name="groupingCount"></param>
+        /// <returns></returns>
         private IEnumerable<int> SumGoodsCost(int groupingCount)
         {
-            List<Goods> source = _context.Goodies.ToList();
-
-            List<int> result = new List<int>();
-
-            int len = source.Count / groupingCount + 1;
+            int len = Goods.Count / groupingCount + 1;
 
             for (int i = 0; i < len; i++)
             {
-                int sum = source.Skip(i * groupingCount).Take(groupingCount).Sum(g => g.Cost);
-                result.Add(sum);
+                int sum = Goods.Skip(i * groupingCount).Take(groupingCount).Sum(g => g.Cost);
+                yield return sum;
             }
-
-            return result;
         }
 
+        /// <summary>
+        /// Sum By Revenue
+        /// </summary>
+        /// <param name="groupingCount"></param>
+        /// <returns></returns>
         private IEnumerable<int> SumGoodsRevenue(int groupingCount)
         {
-            List<Goods> source = _context.Goodies.ToList();
-
-            List<int> result = new List<int>();
-
-            int len = source.Count / groupingCount + 1;
+            int len = Goods.Count / groupingCount + 1;
 
             for (int i = 0; i < len; i++)
             {
-                int sum = source.Skip(i * groupingCount).Take(groupingCount).Sum(g => g.Revenue);
-                result.Add(sum);
+                int sum = Goods.Skip(i * groupingCount).Take(groupingCount).Sum(g => g.Revenue);
+                yield return sum;
             }
-
-            return result;
         }
     }
 }
