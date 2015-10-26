@@ -1,12 +1,18 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Rex.Skill.Tdd.PotterShoppingCart
 {
-    public class PotterShoppingCart
+    public interface IShoppingCart
+    {
+        decimal Caculate(List<Book> books);
+    }
+
+    public class PotterShoppingCart : IShoppingCart
     {
         public decimal Caculate(List<Book> books)
         {
-            throw new System.NotImplementedException();
+            return books.Sum(x => x.Price);
         }
     }
 

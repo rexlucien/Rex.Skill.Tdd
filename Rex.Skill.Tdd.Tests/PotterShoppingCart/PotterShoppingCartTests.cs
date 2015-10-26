@@ -47,11 +47,11 @@ namespace Rex.Skill.Tdd.Tests.PotterShoppingCart
         {
             List<Book> books = new List<Book>()
             {
-                new Book() {Id = 1 , Name = 哈利波特.第1集 , Price = 100},
+                new Book {Id = 1 , Name = 哈利波特.第1集 , Price = 100},
             };
 
-            Tdd.PotterShoppingCart.PotterShoppingCart target = new Tdd.PotterShoppingCart.PotterShoppingCart();
-            decimal actual = target.Caculate(books);
+            var target = new Tdd.PotterShoppingCart.PotterShoppingCart();
+            var actual = target.Caculate(books);
 
             const decimal expected = 100;
             Assert.AreEqual(expected, actual);
