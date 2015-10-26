@@ -18,9 +18,9 @@ namespace Rex.Skill.Tdd.PotterShoppingCart
 
                 List<Book> sub = new List<Book>();
 
-                foreach (var temp in ids.Select(key => source.FirstOrDefault(x => x.Id == key)))
+                foreach (var temp in ids.Select(key => source.First(x => x.Id == key)))
                 {
-                    if (temp != null) sub.Add(temp);
+                    sub.Add(temp);
                     source.Remove(temp);
                 }
 
