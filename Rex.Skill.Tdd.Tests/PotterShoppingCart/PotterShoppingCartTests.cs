@@ -45,7 +45,7 @@ namespace Rex.Skill.Tdd.Tests.PotterShoppingCart
         [TestMethod]
         public void 第一集買了一本_其他都沒買_價格應為100x1等於100元()
         {
-            List<Book> books = new List<Book>()
+            List<Book> books = new List<Book>
             {
                 new Book {Id = 1 , Name = 哈利波特.第1集 , Price = 100},
             };
@@ -65,10 +65,10 @@ namespace Rex.Skill.Tdd.Tests.PotterShoppingCart
         //    And 第五集買了 0 本
         //    When 結帳
         //    Then 價格應為 190 元
-        [TestMethod()]
+        [TestMethod]
         public void 第一集買了一本_第二集也買了一本_價格應為100x2等於190元()
         {
-            List<Book> books = new List<Book>()
+            List<Book> books = new List<Book>
             {
                 new Book {Id = 1 , Name = 哈利波特.第1集 , Price = 100},
                 new Book {Id = 2 , Name = 哈利波特.第2集 , Price = 100},

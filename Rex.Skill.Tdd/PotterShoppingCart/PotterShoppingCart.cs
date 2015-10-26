@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Rex.Skill.Tdd.PotterShoppingCart
@@ -12,7 +13,7 @@ namespace Rex.Skill.Tdd.PotterShoppingCart
     {
         public decimal Caculate(List<Book> books)
         {
-            return books.Sum(x => x.Price);
+            return Convert.ToDecimal(books.Sum(x => (double)x.Price) * (1.05 - books.Count * 0.05));
         }
     }
 
