@@ -13,7 +13,8 @@ namespace Rex.Skill.Tdd.PotterShoppingCart
     {
         public decimal Caculate(List<Book> books)
         {
-            return Convert.ToDecimal(books.Sum(x => (double)x.Price) * (1.05 - books.Count * 0.05));
+            int disconut = books.Count >= 4 ? books.Count + 1 : books.Count;
+            return Convert.ToDecimal(books.Sum(x => (double)x.Price) * (1.05 - disconut * 0.05));
         }
     }
 
