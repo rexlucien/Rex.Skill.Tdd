@@ -132,17 +132,31 @@ namespace Rex.Skill.Tdd.Tests.PotterShoppingCart
             Assert.AreEqual(expected, actual);
         }
 
+        //Scenario: 一次買了整套，一二三四五集各買了一本，價格應為100*5*0.75=375
+        //	Given 第一集買了 1 本
+        //    And 第二集買了 1 本
+        //    And 第三集買了 1 本
+        //    And 第四集買了 1 本
+        //    And 第五集買了 1 本
+        //    When 結帳
+        //    Then 價格應為 375 元
         [TestMethod]
         public void 一次買了整套_一二三四五集各買了一本_價格應為100x5x075等於375()
         {
-            //Scenario: 一次買了整套，一二三四五集各買了一本，價格應為100*5*0.75=375
-            //	Given 第一集買了 1 本
-            //    And 第二集買了 1 本
-            //    And 第三集買了 1 本
-            //    And 第四集買了 1 本
-            //    And 第五集買了 1 本
-            //    When 結帳
-            //    Then 價格應為 375 元
+            List<Book> books = new List<Book>
+            {
+                new Book {Id = 1 , Name = 哈利波特.第1集 , Price = 100},
+                new Book {Id = 2 , Name = 哈利波特.第2集 , Price = 100},
+                new Book {Id = 3 , Name = 哈利波特.第3集 , Price = 100},
+                new Book {Id = 4 , Name = 哈利波特.第4集 , Price = 100},
+                new Book {Id = 5 , Name = 哈利波特.第5集 , Price = 100},
+            };
+
+            var target = new Tdd.PotterShoppingCart.PotterShoppingCart();
+            var actual = target.Caculate(books);
+
+            const decimal expected = 375;
+            Assert.AreEqual(expected, actual);
             Assert.Fail();
         }
 
