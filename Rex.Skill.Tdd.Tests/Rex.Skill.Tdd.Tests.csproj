@@ -62,6 +62,7 @@
     <Compile Include="Authentication\AuthenticationServiceTests.cs" />
     <Compile Include="Calculator\CalculatorTests.cs" />
     <Compile Include="GroupPaging\GroupPagingServiceTests.cs" />
+    <Compile Include="PotterShoppingCart\PotterShoppingCartTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

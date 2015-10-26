@@ -55,6 +55,7 @@
     <Compile Include="GroupPaging\GroupPagingContext.cs" />
     <Compile Include="GroupPaging\GroupPagingService.cs" />
     <Compile Include="GroupPaging\IGroupPagingContext.cs" />
+    <Compile Include="PotterShoppingCart\PotterShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
