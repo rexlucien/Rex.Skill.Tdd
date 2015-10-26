@@ -157,7 +157,6 @@ namespace Rex.Skill.Tdd.Tests.PotterShoppingCart
 
             const decimal expected = 375;
             Assert.AreEqual(expected, actual);
-            Assert.Fail();
         }
 
         [TestMethod]
