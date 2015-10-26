@@ -63,6 +63,7 @@
     <Compile Include="Calculator\CalculatorTests.cs" />
     <Compile Include="GroupPaging\GroupPagingServiceTests.cs" />
     <Compile Include="PotterShoppingCart\PotterShoppingCartTests.cs" />
+    <Compile Include="PotterShoppingCart\哈利波特.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

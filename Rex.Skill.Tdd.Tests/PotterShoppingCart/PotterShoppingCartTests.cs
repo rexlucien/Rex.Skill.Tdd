@@ -21,15 +21,6 @@ namespace Rex.Skill.Tdd.Tests.PotterShoppingCart
     //    In order to 提供最便宜的價格給來買書的爸爸媽媽
     //    As a 佛心的出版社老闆
     //    I want to 設計一個哈利波特的購物車
-    public static class 哈利波特
-    {
-        public static string 第1集 => @"哈利波特第1集";
-        public static string 第2集 => @"哈利波特第2集";
-        public static string 第3集 => @"哈利波特第3集";
-        public static string 第4集 => @"哈利波特第4集";
-        public static string 第5集 => @"哈利波特第5集";
-    }
-
     [TestClass]
     public class PotterShoppingCartTests
     {
@@ -41,7 +32,6 @@ namespace Rex.Skill.Tdd.Tests.PotterShoppingCart
         //    And 第五集買了 0 本
         //    When 結帳
         //    Then 價格應為 100 元
-
         [TestMethod]
         public void 第一集買了一本_其他都沒買_價格應為100x1等於100元()
         {
