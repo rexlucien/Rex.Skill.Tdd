@@ -105,7 +105,7 @@ namespace Rex.Skill.Tdd.Tests.PotterShoppingCart
         //    When 結帳
         //    Then 價格應為 320 元
         [TestMethod]
-        public void 一二三四集各買了一本_價格應為100x4x08等於270()
+        public void 一二三四集各買了一本_價格應為100x4x08等於320()
         {
             List<Book> books = new List<Book>
             {
